@@ -49,8 +49,8 @@ gulp.task('images', function() {
 
 // Copy HTML and font files
 gulp.task('copy', function() {
-	return gulp.src(['src/*.html', 'src/fonts/'])
-		.pipe(gulp.dest('dist/'));
+	gulp.src('src/*.html').pipe(gulp.dest('dist/'));
+	return gulp.src('src/fonts/**').pipe(gulp.dest('dist/fonts/'));
 });
 
 
