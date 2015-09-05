@@ -1,0 +1,1 @@
+!function(o,n,t){"use strict";console.log("got some JS!")}(window,document);

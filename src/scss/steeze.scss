@@ -8,18 +8,16 @@
 // Core
 // =================================================
 
-@import 'core/breakpoints';
-@import 'core/colors';
-@import 'core/normalize';
+@import 'settings/breakpoints';
+@import 'settings/colors';
 
 
 // =================================================
 // Partials
 // =================================================
 
-// @import 'partials/layout'; ?
-// @import 'partials/base'; ?
-@import 'partials/typography';
-@import 'partials/icons';
-@import 'partials/section';
-@import 'partials/sidebar';
+// @import 'partials/normalize';
+// @import 'partials/typography';
+// @import 'partials/icons';
+// @import 'partials/section';
+// @import 'partials/sidebar';

@@ -1,18 +1,18 @@
 
 // Load plugins
-var gulp         = require('gulp'),
-	sass         = require('gulp-ruby-sass'),
-	autoprefixer = require('gulp-autoprefixer'),
-	minifycss    = require('gulp-minify-css'),
-	// jshint       = require('gulp-jshint'),
-	// uglify       = require('gulp-uglify'),
-	imagemin     = require('gulp-imagemin'),
-	rename       = require('gulp-rename'),
-	concat       = require('gulp-concat'),
-	notify       = require('gulp-notify'),
-	cache        = require('gulp-cache'),
-	livereload   = require('gulp-livereload'),
-	del          = require('del');
+var gulp         = require('gulp');
+var sass         = require('gulp-ruby-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var minifycss    = require('gulp-minify-css');
+var jshint       = require('gulp-jshint');
+var uglify       = require('gulp-uglify');
+var imagemin     = require('gulp-imagemin');
+var rename       = require('gulp-rename');
+var concat       = require('gulp-concat');
+var cache        = require('gulp-cache');
+var livereload   = require('gulp-livereload');
+var del          = require('del');
+var notifier     = require('node-notifier');
 
 
 // CSS Task
@@ -23,7 +23,6 @@ gulp.task('styles', function() {
 		.pipe(rename({suffix: '-min'}))
 		.pipe(minifycss())
 		.pipe(gulp.dest('dist/css'))
-		.pipe(notify({ message: 'Steeze on lock: <%= file.relative %>' }));
 });
 
 
@@ -31,13 +30,12 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src('src/js/**/*.js')
 		// .pipe(jshint('.jshintrc'))
-		.pipe(jshint.reporter('default'))
+		// .pipe(jshint.reporter('default'))
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(rename({suffix: '-min'}))
 		.pipe(uglify())
 		.pipe(gulp.dest('dist/js'))
-		.pipe(notify({ message: 'Scripts on lock: <%= file.relative %>' }));
 });
 
 
@@ -49,14 +47,14 @@ gulp.task('images', function() {
 });
 
 
-// Copy
+// Copy HTML and font files
 gulp.task('copy', function() {
-	return gulp.src('src/*.html')
+	return gulp.src(['src/*.html', 'src/fonts/'])
 		.pipe(gulp.dest('dist/'));
 });
 
 
-// Clean
+// Clean out /dist/ directory
 gulp.task('clean', function(cb) {
 	del(['dist/**/*'], cb)
 });
@@ -65,6 +63,7 @@ gulp.task('clean', function(cb) {
 // Default task
 gulp.task('default', ['clean'], function() {
 	gulp.start('styles', 'scripts', 'images', 'copy');
+	notifier.notify({ title: 'Burp!', message: 'that was a big gulp, brah.' });
 });
 
 
