@@ -1,2 +1,4 @@
-# resume-template
+Resume Remplate
+=====
+
 Simple template for awesome resumes
