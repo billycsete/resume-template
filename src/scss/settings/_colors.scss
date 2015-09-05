@@ -4,10 +4,57 @@
 //
 // =================================================
 
-$blue:       #048ac9;
-$teal:       #0aa88f;
-$tan:        #f0f2ed;
-$dark-grey:  #222222;
-$grey:       #272a2f;
-$light-grey: #3d4044;
-$white:      #ffffff;
+$blue       : #048ac9;
+$teal       : #0aa88f;
+$tan        : #f0f2ed;
+$dark-grey  : #222222;
+$grey       : #272a2f;
+$light-grey : #3d4044;
+$white      : #ffffff;
+
+
+// =============================
+// Elements
+// =============================
+
+// sections
+$section-bg           : $white;
+$section-bg-alt       : $white;
+
+// nav
+$nav-bg               : $grey;
+$nav-bg-alt           : $grey;
+
+// nav links
+$nav-link-bg          : $grey;
+$nav-link-color       : $grey;
+$nav-link-bg-hover    : $grey;
+$nav-link-color-hover : $grey;
+
+
+// =============================
+// Typography
+// =============================
+
+// h1
+$h1-color         : $grey;
+$h1-bg-color      : $grey;
+
+// h2
+$h2-color         : $grey;
+$h2-bg-color      : $grey;
+
+// h3
+$h3-color         : $grey;
+
+// h4
+$h4-color         : $grey;
+
+// p
+$p-color          : $grey;
+
+// links
+$a-color          : $grey;
+$a-bg-color       : $grey;
+$a-color-hover    : $grey;
+$a-bg-color-hover : $grey;

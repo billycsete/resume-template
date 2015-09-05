@@ -1,0 +1,15 @@
+// =================================================
+//
+// Layout
+//
+// =================================================
+
+.content {
+	@include media($medium) {
+		padding-left: 250px;
+	}
+
+	@include media($large) {
+		padding-left: 350px;
+	}
+}

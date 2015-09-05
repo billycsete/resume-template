@@ -80,7 +80,10 @@ gulp.task('watch', function() {
 	// Create LiveReload server
 	livereload.listen();
 	// Watch any files in dist/, reload on change
-	gulp.watch(['dist/**']).on('change', livereload.changed);
+	gulp.watch(['dist/**']).on('change', function(){
+		livereload.changed('Dat website be');
+		notifier.notify({ title: 'Yo doooode!', message: 'that website changed.' });
+	});
 });
 
 
