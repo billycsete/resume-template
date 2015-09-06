@@ -48,16 +48,19 @@
 	.profile {
 		padding: 15px 0 15px 25px;
 		margin-bottom: 0;
-		line-height: 1.8rem;
 
 		.name {
 			display: none;
+			margin-bottom: 5px;
+
 			@include media(medium) {
 				display: block;
 			}
 		}
 
 		a {
+			font-size: 0.9rem;
+			line-height: 1.5rem;
 			color: $sidebar-color;
 		}
 	}

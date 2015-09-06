@@ -834,10 +834,10 @@ a.link:hover {
 .sidebar-profile .profile {
   padding: 15px 0 15px 25px;
   margin-bottom: 0;
-  line-height: 1.8rem;
 }
 .sidebar-profile .profile .name {
   display: none;
+  margin-bottom: 5px;
 }
 @media (min-width: 660px) {
   .sidebar-profile .profile .name {
@@ -845,6 +845,8 @@ a.link:hover {
   }
 }
 .sidebar-profile .profile a {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
   color: #ffffff;
 }
 
