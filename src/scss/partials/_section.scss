@@ -7,11 +7,11 @@
 .section {
 	padding: 40px 25px;
 
-	@include media($medium) {
+	@include media(medium) {
 		padding: 70px 50px;
 	}
 
-	@include media($large) {
+	@include media(large) {
 		padding: 70px;
 	}
 
@@ -21,7 +21,7 @@
 		z-index: 1;
 		margin-left: -25px;
 
-		@include media($medium) {
+		@include media(medium) {
 			margin-left: 0px;
 		}
 	}
