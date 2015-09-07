@@ -6,6 +6,7 @@
 
 .section {
 	padding: 40px 25px;
+	background-color: $section-bg;
 
 	@include media(medium) {
 		padding: 70px 50px;
@@ -30,5 +31,5 @@
 
 // Alternate colored sections
 .tan-section {
-	background-color: $tan;
+	background-color: $section-bg-alt;
 }

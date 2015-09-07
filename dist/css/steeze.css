@@ -393,6 +393,7 @@ th {
 }
 
 html, body {
+  color: #515761;
   font-size: 16px;
   font-family: 'Open Sans', 'Helvetica', sans-serif;
   text-rendering: optimizeLegibility;
@@ -411,7 +412,7 @@ h1 {
 }
 h1 span {
   color: #ffffff;
-  background-color: #048ac9;
+  background-color: #3cbae1;
   display: inline-block;
   padding: 12px 25px;
 }
@@ -420,7 +421,6 @@ h2 {
   font-weight: 400;
   font-size: 1.2rem;
   margin: 0 0 2rem 0;
-  display: inline-block;
 }
 @media (min-width: 660px) {
   h2 {
@@ -429,17 +429,18 @@ h2 {
 }
 h2 span {
   color: #ffffff;
-  background-color: #048ac9;
+  background-color: #f89229;
   display: inline-block;
   padding: 6px 25px;
 }
-h2 span.teal {
-  background-color: #0aa88f;
+h2.alt-color span {
+  background-color: #515761;
 }
 
 h3 {
+  color: #515761;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin: 0 0 1rem 0;
 }
@@ -463,10 +464,13 @@ ol, ul {
     margin-bottom: 3rem;
   }
 }
+ol li, ul li {
+  margin: 0 0 0.25rem 0;
+}
 ol li.stroke-below, ul li.stroke-below {
   border-bottom: 1px solid #ccc;
-  padding-bottom: rem(8px);
-  margin-bottom: rem(8px);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 ol.last, ul.last {
   margin-bottom: 0;
@@ -483,13 +487,14 @@ ul.bullets li {
 a {
   text-decoration: none;
 }
-a.link {
-  color: #0aa88f;
+a.inline-link {
+  background-color: transparent;
+  color: #3cbae1;
   padding: 0.1rem;
   line-height: 1.4rem;
 }
-a.link:hover {
-  background-color: #0aa88f;
+a.inline-link:hover {
+  background-color: #3cbae1;
   color: #ffffff;
 }
 
@@ -862,7 +867,7 @@ a.link:hover {
   margin: 0;
 }
 .sidebar-nav li {
-  border-bottom: 1px solid #3e434b;
+  border-bottom: 1px solid #494d55;
 }
 .sidebar-nav .sidebar-link {
   position: relative;
@@ -875,13 +880,14 @@ a.link:hover {
           transition: background-color 0.3s ease-in-out, padding 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .no-touch .sidebar-nav .sidebar-link:hover {
-  background-color: #3e434b;
+  background-color: #494d55;
   color: #ffffff;
   padding-left: 50px;
 }
 
 .section {
   padding: 40px 25px;
+  background-color: #ffffff;
 }
 @media (min-width: 660px) {
   .section {
@@ -909,6 +915,6 @@ a.link:hover {
 }
 
 .intro-section .intro-paragraph {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1.15rem;
+  line-height: 1.7rem;
 }
