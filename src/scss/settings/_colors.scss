@@ -13,6 +13,7 @@ $darker-grey     : #494d55;
 $dark-grey       : #3e434b;
 $white           : #ffffff;
 $tan             : #f0f2ed;
+$tan-alt         : #fdfffa;
 
 
 // ====================================
@@ -38,6 +39,12 @@ $nav-link-color       : $white;
 $nav-link-bg-hover    : $darker-grey ;
 $nav-link-color-hover : $white;
 $nav-border-color     : $darker-grey;
+
+// callout
+$callout-bg           : $tan;
+$callout-bg-alt       : $white;
+$callout-color        : $grey;
+$callout-border-color : $blue;
 
 
 // ====================================

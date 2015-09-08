@@ -38,13 +38,17 @@ html, body {
 h1 {
 	font-weight: $normal;
 	font-size: 2rem;
-	margin: 0 0 0.5rem 0;
+	margin: 0 0 3rem 0;
 
 	span {
 		color: $h1-color;
 		background-color: $h1-bg-color;
 		display: inline-block;
 		padding: 12px 25px;
+	}
+
+	&.no-margin-bottom {
+		margin-bottom: 0.5rem;
 	}
 }
 
@@ -68,6 +72,10 @@ h2 {
 	&.alt-color span {
 		background-color: $h2-bg-color-alt;
 	}
+
+	&.no-margin-bottom {
+		margin-bottom: 0.5rem;
+	}
 }
 
 h3 {
@@ -76,6 +84,22 @@ h3 {
 	font-size: 1.2rem;
 	line-height: 1.4rem;
 	margin: 0 0 1rem 0;
+
+	&.no-margin-bottom {
+		margin-bottom: 0;
+	}
+}
+
+h4 {
+	color: $h4-color;
+	font-weight: $light;
+	font-size: 1rem;
+	line-height: 1.4rem;
+	margin: 0 0 1rem 0;
+
+	&.no-margin-bottom {
+		margin-bottom: 0;
+	}
 }
 
 
@@ -88,6 +112,15 @@ p {
 	font-size: 1rem;
 	line-height: 1.4rem;
 	margin: 0 0 1rem 0;
+
+	&.intro-paragraph {
+		font-size: 1.15rem;
+		line-height: 1.7rem;
+	}
+
+	&.no-margin-bottom {
+		margin-bottom: 0;
+	}
 }
 
 
@@ -116,7 +149,7 @@ ol, ul {
 		margin-bottom: 0.75rem;
 	}
 
-	&.last {
+	&.no-margin-bottom {
 		margin-bottom: 0;
 	}
 }
@@ -127,6 +160,10 @@ ul.bullets {
 
 	li {
 		margin: 0 0 0.5rem 0;
+	}
+
+	&.no-margin-bottom {
+		margin-bottom: 0;
 	}
 }
 
