@@ -1,1 +1,1 @@
-!function(o,n,t){"use strict";console.log("got some JS!")}(window,document);
+!function(n,t,c){"use strict"}(window,document);
