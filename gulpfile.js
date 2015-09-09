@@ -29,8 +29,8 @@ gulp.task('styles', function() {
 // JS Task
 gulp.task('scripts', function() {
 	return gulp.src('src/js/**/*.js')
-		// .pipe(jshint('.jshintrc'))
-		// .pipe(jshint.reporter('default'))
+		.pipe(jshint())
+		.pipe(jshint.reporter('default'))
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(rename({suffix: '-min'}))
@@ -50,7 +50,7 @@ gulp.task('images', function() {
 // Copy HTML and font files
 gulp.task('copy', function() {
 	gulp.src('src/*.html').pipe(gulp.dest('dist/'));
-	return gulp.src('src/fonts/**').pipe(gulp.dest('dist/fonts/'));
+	gulp.src('src/fonts/**').pipe(gulp.dest('dist/fonts/'));
 });
 
 

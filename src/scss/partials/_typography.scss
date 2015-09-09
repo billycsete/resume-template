@@ -83,7 +83,7 @@ h3 {
 	font-weight: $bold;
 	font-size: 1.2rem;
 	line-height: 1.4rem;
-	margin: 0 0 1rem 0;
+	margin: 0 0 0.75rem 0;
 
 	&.no-margin-bottom {
 		margin-bottom: 0;
@@ -95,7 +95,7 @@ h4 {
 	font-weight: $light;
 	font-size: 1rem;
 	line-height: 1.4rem;
-	margin: 0 0 1rem 0;
+	margin: 0 0 0.75rem 0;
 
 	&.no-margin-bottom {
 		margin-bottom: 0;
@@ -176,13 +176,15 @@ a {
 	text-decoration: none;
 
 	&.inline-link {
-		background-color: $a-bg-color;
+		text-decoration: underline;
+		// background-color: $a-bg-color;
 		color: $a-color;
 		padding: 0.1rem;
 		line-height: 1.4rem;
 		&:hover {
-			background-color: $a-bg-color-hover;
+			// background-color: $a-bg-color-hover;
 			color: $a-color-hover;
+			text-decoration: none;
 		}
 	}
 }

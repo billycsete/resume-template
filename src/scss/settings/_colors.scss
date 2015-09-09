@@ -7,6 +7,7 @@
 $red             : #de2411;
 $orange          : #f89229;
 $blue            : #3cbae1;
+$darker-blue     : #2aa7ce;
 $black           : #222222;
 $grey            : #515761;
 $darker-grey     : #494d55;
@@ -70,7 +71,7 @@ $h3-color         : $grey;
 $h4-color         : $grey;
 
 // inline links
-$a-color          : $blue;
+$a-color          : $darker-blue;
 $a-bg-color       : transparent;
-$a-color-hover    : $white;
+$a-color-hover    : $blue;
 $a-bg-color-hover : $blue;

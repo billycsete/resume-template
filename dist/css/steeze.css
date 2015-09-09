@@ -448,7 +448,7 @@ h3 {
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 1.4rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.75rem 0;
 }
 h3.no-margin-bottom {
   margin-bottom: 0;
@@ -459,7 +459,7 @@ h4 {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.4rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.75rem 0;
 }
 h4.no-margin-bottom {
   margin-bottom: 0;
@@ -518,14 +518,14 @@ a {
   text-decoration: none;
 }
 a.inline-link {
-  background-color: transparent;
-  color: #3cbae1;
+  text-decoration: underline;
+  color: #2aa7ce;
   padding: 0.1rem;
   line-height: 1.4rem;
 }
 a.inline-link:hover {
-  background-color: #3cbae1;
-  color: #ffffff;
+  color: #3cbae1;
+  text-decoration: none;
 }
 
 @font-face {
@@ -1589,7 +1589,7 @@ a.inline-link:hover {
   color: #515761;
   background-color: #f0f2ed;
   border-left: 4px solid #3cbae1;
-  padding: 15px 0 15px 20px;
+  padding: 18px 0 18px 20px;
   margin-bottom: 2.5rem;
 }
 .callout.alt-bg-callout {
