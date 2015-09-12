@@ -1,5 +1,43 @@
+'use strict';
+
+// Add raf shim
+require('./requestAnimationFrame.js');
+
+
+
+/**
+ * scrollToElement
+ * @description do something super cool
+ * @param element
+ * @param speed
+ * @param easing
+ */
+var scrollToElement = function(element, speed, easing) {
+
+}
+
+
+/**
+ * @lends ModuleName.prototype
+ */
+var proto = ModuleName.prototype;
+
+
+/**
+ * @method doSomethingCool
+ * @description do something super cool
+ */
+proto.doSomethingCool = function() {
+
+}
+
+
+module.exports.ModuleMame = ModuleMame;
+
+
+
 // main function
-function scrollToElement(element, speed, easing) {
+var scrollToElement = function(element, speed, easing) {
 
 	var scrollTargetY = element.offsetTop;
 	// scrollTargetY: the target scrollY property of the element
@@ -40,7 +78,7 @@ function scrollToElement(element, speed, easing) {
 	var t = easingEquations[easing](p);
 
 	if (p < 1) {
-		requestAnimFrame(update);
+		requestAnimFrame(tick);
 		window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t));
 	} else {
 		window.scrollTo(0, scrollTargetY);
@@ -51,6 +89,29 @@ function scrollToElement(element, speed, easing) {
 }
 
 
-var update = function() {
+// var ModuleMame = function() {
 
-}
+// 	var privateData = 'private';
+
+// 	function privateFunc() {
+// 		// nothing can call this except itself
+// 		console.log( 'this is private!' );
+// 	}
+
+// 	return {
+
+// 		initialize : function( arg ) {
+// 			this.arg = arg;
+// 			privateFunc();
+// 		},
+
+// 		doSomethingCool : function() {
+
+// 		}
+
+// 	}
+
+// });
+
+
+module.exports.scrollToElement = scrollToElement;

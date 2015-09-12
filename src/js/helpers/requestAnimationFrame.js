@@ -3,6 +3,8 @@
  * http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
  */
 
+'use strict';
+
 window.requestAnimFrame = (function() {
 	return window.requestAnimationFrame ||
 	window.webkitRequestAnimationFrame ||

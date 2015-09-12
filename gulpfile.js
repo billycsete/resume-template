@@ -11,31 +11,46 @@ var rename       = require('gulp-rename');
 var concat       = require('gulp-concat');
 var cache        = require('gulp-cache');
 var livereload   = require('gulp-livereload');
+var browserify   = require('browserify');
 var del          = require('del');
 var notifier     = require('node-notifier');
+var source       = require('vinyl-source-stream');
+var buffer       = require('vinyl-buffer');
 
 
 // CSS Task
 gulp.task('styles', function() {
 	return sass('src/scss/steeze.scss', { style: 'expanded' })
 		.pipe(autoprefixer('last 2 version'))
-		.pipe(gulp.dest('dist/css'))
+		.pipe(gulp.dest('dist/css/'))
 		.pipe(rename({suffix: '-min'}))
 		.pipe(minifycss())
-		.pipe(gulp.dest('dist/css'))
+		.pipe(gulp.dest('dist/css/'))
 });
 
 
-// JS Task
-gulp.task('scripts', function() {
+// Lint JS
+gulp.task('jshint', function() {
 	return gulp.src('src/js/**/*.js')
-		.pipe(jshint())
+		.pipe(jshint('.jshintrc'))
 		.pipe(jshint.reporter('default'))
-		.pipe(concat('main.js'))
-		.pipe(gulp.dest('dist/js'))
+});
+
+
+// Build JS
+gulp.task('scripts', function () {
+	var b = browserify({
+		entries: 'src/js/main.js',
+		debug: true
+	});
+
+	return b.bundle()
+		.pipe(source('main.js'))
+		.pipe(buffer())
+		.pipe(gulp.dest('dist/js/'))
 		.pipe(rename({suffix: '-min'}))
 		.pipe(uglify())
-		.pipe(gulp.dest('dist/js'))
+		.pipe(gulp.dest('dist/js/'))
 });
 
 
@@ -43,7 +58,7 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
 	return gulp.src('src/images/**/*')
 		.pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-		.pipe(gulp.dest('dist/images'))
+		.pipe(gulp.dest('dist/images/'))
 });
 
 
@@ -62,7 +77,7 @@ gulp.task('clean', function(cb) {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-	gulp.start('styles', 'scripts', 'images', 'copy');
+	gulp.start('styles', 'jshint', 'scripts', 'images', 'copy');
 	notifier.notify({ title: 'Burp!', message: 'that was a big gulp, brah.' });
 });
 
