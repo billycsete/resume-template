@@ -10,8 +10,13 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-// Init analytics
-ga('create', 'UA-43275048-4', 'auto');
-ga('send', 'pageview');
 
+// Init analytics
+var initialize = function(trackingID) {
+	ga('create', trackingID, 'auto');
+	ga('send', 'pageview');
+};
+
+
+module.exports.initialize = initialize;
 /* jshint ignore:end */

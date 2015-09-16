@@ -29,7 +29,7 @@ var Main = (function() {
 				// prevent the default anchor link jump
 				evt.preventDefault();
 				// scroll to the section related to the sidebar link clicked
-				scrollToElement(element, 1500, 'easeInOutQuint');
+				scrollToElement(element, 1500);
 			});
 		}
 	}
