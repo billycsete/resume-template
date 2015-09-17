@@ -13,3 +13,19 @@
 		padding-left: 350px;
 	}
 }
+
+
+// ====================================
+// Two Column
+// ====================================
+
+.two-column {
+	@include selfclear;
+
+	@include media(medium) {
+		.column {
+			width: 45%;
+			float: left;
+		}
+	}
+}

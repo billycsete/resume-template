@@ -1471,6 +1471,18 @@ a.inline-link:hover {
   }
 }
 
+.two-column:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+@media (min-width: 660px) {
+  .two-column .column {
+    width: 45%;
+    float: left;
+  }
+}
+
 .sidebar {
   position: relative;
   z-index: 10;
