@@ -9,22 +9,22 @@ require('./requestAnimationFrame.js');
  *
  * @description smooth scroll to an element
  * @param {Element} element - anchor link scroll to trigger
- * @param {Number} speed - speed of scroll in milliseconds
+ * @param {Number} scrollSpeed - speed of scroll in milliseconds
  */
-function scrollToElement(element, speed) {
+function scrollToElement(element, scrollSpeed) {
 
 	var scrollTargetY = element.offsetTop || 0;
 	var scrollY = window.scrollY;
-	var speed = speed || 2000;
+	var speed = scrollSpeed || 2000;
 	var currentTime = 0;
 
-	// min time .1, max time .8 seconds
-	var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));
+	// min time 0.1, max time 0.8 seconds
+	var time = Math.max(0.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, 0.8));
 
 	// easing equations from https://github.com/danro/easing-js/blob/master/easing.js
 	function easeOutSine(pos) {
 		return Math.sin(pos * (Math.PI / 2));
-	};
+	}
 
 	// add animation loop
 	function tick() {
