@@ -1484,6 +1484,9 @@ a.inline-link:hover {
     width: 45%;
     float: left;
   }
+  .two-column .column:last-child {
+    float: right;
+  }
 }
 
 .sidebar {
