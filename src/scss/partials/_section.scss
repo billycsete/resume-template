@@ -16,6 +16,13 @@
 		padding: 70px;
 	}
 
+	.section-content {
+		// This element's only purpose is to limit the width of the
+		// content inside a section, but still let the section
+		// background span the whole width of the page
+		max-width: 900px;
+	}
+
 	h1, h2 {
 		position: relative;
 		z-index: 1;

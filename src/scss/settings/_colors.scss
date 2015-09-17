@@ -9,12 +9,11 @@ $orange          : #f89229;
 $blue            : #3cbae1;
 $darker-blue     : #2aa7ce;
 $black           : #222222;
+$light-grey      : #f1f1f1;
 $grey            : #515761;
 $darker-grey     : #494d55;
 $dark-grey       : #3e434b;
 $white           : #ffffff;
-$tan             : #f0f2ed;
-$tan-alt         : #fdfffa;
 
 
 // ====================================
@@ -23,7 +22,7 @@ $tan-alt         : #fdfffa;
 
 // sections
 $section-bg           : $white;
-$section-bg-alt       : $tan;
+$section-bg-alt       : $light-grey;
 
 // sidebar
 $sidebar-bg           : $grey;
@@ -42,8 +41,7 @@ $nav-link-color-hover : $white;
 $nav-border-color     : $darker-grey;
 
 // callout
-$callout-bg           : $tan;
-$callout-bg-alt       : $white;
+$callout-bg           : rgba(225,225,225, 0.4);
 $callout-color        : $grey;
 $callout-border-color : $blue;
 
