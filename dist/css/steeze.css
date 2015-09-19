@@ -1494,7 +1494,6 @@ a.inline-link:hover {
   z-index: 10;
   background-color: #515761;
   sidebar-color: #ffffff;
-  overflow: scroll;
 }
 .sidebar:after {
   content: '';
