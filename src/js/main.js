@@ -1,6 +1,6 @@
 'use strict';
 
-var googleAnalytics  = require('./helpers/googleAnalytics.js');
+var googleAnalytics = require('./helpers/googleAnalytics.js');
 var scrollToElement = require('./helpers/scrollToElement.js');
 
 

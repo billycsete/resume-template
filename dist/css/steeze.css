@@ -395,7 +395,8 @@ th {
 html, body {
   color: #515761;
   font-size: 16px;
-  font-family: 'Open Sans', 'Helvetica', sans-serif;
+  font-family: 'proxima-nova', 'Helvetica', 'sans-serif';
+  font-weight: 300;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -486,18 +487,24 @@ ol, ul {
   line-height: 1.4rem;
   list-style-type: none;
 }
-@media (min-width: 660px) {
-  ol, ul {
-    margin-bottom: 3rem;
-  }
-}
 ol li, ul li {
   margin: 0 0 0.25rem 0;
 }
 ol li.stroke-below, ul li.stroke-below {
   border-bottom: 1px solid #ccc;
-  padding-bottom: 0.75rem;
-  margin-bottom: 0.75rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+ol li.stroke-above, ul li.stroke-above {
+  border-top: 1px solid #ccc;
+  padding-top: 2.5em;
+  margin-top: 2.5rem;
+}
+ol li.space-below, ul li.space-below {
+  margin-bottom: 0.5rem;
+}
+ol li.space-above, ul li.space-above {
+  margin-bottom: 0.5rem;
 }
 ol.no-margin-bottom, ul.no-margin-bottom {
   margin-bottom: 0;
@@ -1571,7 +1578,7 @@ a.inline-link:hover {
 .no-touch .sidebar-nav .sidebar-link:hover {
   background-color: #494d55;
   color: #ffffff;
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
 .section {

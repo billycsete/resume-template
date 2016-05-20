@@ -19,9 +19,10 @@ $bold   : 700;
 // ====================================
 
 html, body {
-	color : $body-copy-color;
+	color: $body-copy-color;
 	font-size: 16px;
-	font-family: 'Open Sans', 'Helvetica', sans-serif;
+	font-family: 'proxima-nova', 'Helvetica', 'sans-serif';
+	font-weight: $light;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 
@@ -135,18 +136,26 @@ ol, ul {
 	line-height: 1.4rem;
 	list-style-type: none;
 
-	@include media(medium) {
-		margin-bottom: 3rem;
-	}
-
 	li {
 		margin: 0 0 0.25rem 0;
 	}
 
 	li.stroke-below {
 		border-bottom: 1px solid #ccc;
-		padding-bottom: 0.75rem;
-		margin-bottom: 0.75rem;
+		padding-bottom: 2.5rem;
+		margin-bottom: 2.5rem;
+	}
+	li.stroke-above {
+		border-top: 1px solid #ccc;
+		padding-top: 2.5em;
+		margin-top: 2.5rem;
+	}
+
+	li.space-below {
+		margin-bottom: 0.5rem;
+	}
+	li.space-above {
+		margin-bottom: 0.5rem;
 	}
 
 	&.no-margin-bottom {
