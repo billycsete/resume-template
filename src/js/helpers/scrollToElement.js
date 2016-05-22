@@ -1,6 +1,6 @@
 'use strict';
 
-// Add raf shim
+// raf shim
 require('./requestAnimationFrame.js');
 
 
