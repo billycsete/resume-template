@@ -18,14 +18,4 @@ http://billy.codes/that/resume-template/
 
 ### Build
 `gulp` - default build:
-
-1. sass
-2. autoprefixer
-3. minify css
-4. jshint
-5. browserify
-6. uglify
-7. optimize images
-8. copy all the things to /dist/
-
 `gulp watch` - sets up Live Reload connection and watches for changes
